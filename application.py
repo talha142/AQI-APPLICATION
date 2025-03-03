@@ -19,7 +19,8 @@ page = st.sidebar.radio("Go to", ["Home", "Data Analysis", "Prediction", "About"
 @st.cache_data
 def load_and_clean_data():
     """Load and clean the dataset."""
-    data = pd.read_csv("C:/Users/Ali/Desktop/AQI PROJECT/city_day.csv")
+    data = pd.read_csv("city_day.csv")
+
     data["Date"] = pd.to_datetime(data["Date"])
     
     numerical_columns = data.select_dtypes(include=['number']).columns
