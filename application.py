@@ -67,7 +67,7 @@ import matplotlib.pyplot as plt
 @st.cache_data
 def load_data():
     """Load and clean AQI dataset."""
-    data = pd.read_csv("C:/Users/Ali/Desktop/AQI PROJECT/city_day.csv")
+    data = pd.read_csv("city_day.csv")
 
     # Drop 'City' and 'Date' columns
     data.drop(columns=["City", "Date"], inplace=True, errors="ignore")
